@@ -9,12 +9,9 @@
                     <h1 class="text-center">Login</h1>
                     <div></div>
                     <div>
-                        <form method="POST">
+                    <form method="POST" action="{{route('tdousuario.check')}}">
+                            @method('GET')
                             @csrf
-                            <select name="comboDocumento" id="comboDocumento" >
-                                <option value="1">C.C</option>
-                                <option value="2">C.E</option>
-                            </select><br><br>
                             <input name="ide" type="text" placeholder="Identificacion"><br><br>
                             <input name="usu" type="text" placeholder="Usuario"><br><br>
                             <input name="pass" type="password" placeholder="clave"><br><br>

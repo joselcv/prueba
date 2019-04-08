@@ -4,7 +4,7 @@
 
 @section('contenido')
     <div class="container">
-        <h1 class="text-center">Registrar Documento</h1>
+        <h1 class="text-center mt-5">Registrar Documento</h1>
             <form  method="POST" action=" {{route('tdocumento.store')}} ">
                 @csrf
                     <div class="form-group">

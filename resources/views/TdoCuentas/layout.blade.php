@@ -19,17 +19,21 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav mr-auto">
                     
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Menu
-                      </a>
-                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{ url('logout') }}">Cerrar sesión</a>
-                        <a class="dropdown-item" href="#">Clientes</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Cuentas</a>
-                      </div>
-                    </li>
+                      <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Menu
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{route('tdocliente.index')}}">Clientes</a>
+                            <a class="dropdown-item" href="{{route('tdocuenta.index')}}">Cuentas</a>
+                            <a class="dropdown-item" href="{{route('tdoretiros.index')}}">Retiros</a>
+                            <a class="dropdown-item" href="{{route('tdoconsignaciones.index')}}">Consignaciones</a>
+                            <a class="dropdown-item" href="{{route('tdousuario.index')}}">Usuarios</a>
+                            <a class="dropdown-item" href="{{route('tdocumento.index')}}">Tipos de documentos</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{{ url('logout') }}">Cerrar sesión</a>
+                          </div>
+                        </li>
                   </ul>
                 </div>
               </nav>

@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\usuarios;
 use App\tipos_usuarios;
+use Hash;
+use Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class UsuariosController extends Controller
@@ -13,6 +16,22 @@ class UsuariosController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function check(Request $request){
+      //metodo para encriptar $request['pass'] = Hash::make($request['pass']);
+        $usuario = DB::table('usuarios')->where('usu_cedula', $request->get('ide'))->first();
+        if($usuario->usu_cedula==$request->get('ide') && $usuario->usu_login==$request->get('usu')  && $usuario->usu_clave==$request->get('pass') ){
+            if($usuario->tusu_codigo==1){
+                //cajero
+            }else{
+                // Asesor comercial
+            }
+        }
+      
+    }
+
+
+
     public function index()
     {
         $data=usuarios::all();

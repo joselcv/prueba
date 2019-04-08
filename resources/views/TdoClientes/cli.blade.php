@@ -33,7 +33,7 @@
                                         <td class="text-center">{{$cliente->cli_telefono}}</td>
                                         <td class="text-center">{{$cliente->cli_mail}}</td>
                                         <td class="text-center"><a class="btn btn-dark mb-2" href="{{route('tdocliente.edit',$cliente->cli_cedula)}}"><i class="far fa-edit"></i></a>
-                                          <td><a  class="btn btn-dark"><i class="fas fa-info-circle"></i></a> </td>
+                                        <td><a href="{{route('tdocliente.show',$cliente->cli_cedula)}}"  class="btn btn-dark"><i class="fas fa-info-circle"></i></a> </td>
                                         </tr>
                                 @endforeach
                 

@@ -54,14 +54,12 @@ class ConsignacionesController extends Controller
     
         $saldo=DB::table('cuentas')->where('cue_numero', $request->get('cue_numero'))->value('cue_saldo');
         
-        if($saldo<100000){
-            DB::table('cuentas')
-            ->where('cue_numero',$request->get('cue_numero'))
-            ->update(['cue_activa' => false]);
-        }else{
+        if($saldo>=100000){
             DB::table('cuentas')
             ->where('cue_numero',$request->get('cue_numero'))
             ->update(['cue_activa' => true]);
+        }else{
+           
         }
     
         return redirect()->route('tdoconsignaciones.index');

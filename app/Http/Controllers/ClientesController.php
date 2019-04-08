@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\clientes;
 use App\cuentas;
 use App\tipos_documentos;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class ClientesController extends Controller
@@ -81,9 +82,8 @@ class ClientesController extends Controller
      * @param  \App\clientes  $clientes
      * @return \Illuminate\Http\Response
      */
-    public function show(clientes $clientes)
+    public function show()
     {
-        //
     }
 
     /**
