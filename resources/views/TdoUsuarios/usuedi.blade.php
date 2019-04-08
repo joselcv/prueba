@@ -7,18 +7,19 @@
 
 
 <div class="container">
-        <h1 class="text-center">Editar Usuarios</h1>
+        <h1 class="text-center mt-5 mb-5">Editar Usuarios</h1>
             <form  method="POST" action=" {{route('tdousuario.update',$usuario->usu_cedula)}} ">
                 @csrf
                 @method('PUT')
                 
                     <div class="form-group">
-                      <label for="tdoc_codigo">Tipo Documento</label>
+                      
                       <select name="tusu_codigo" id="tusu_codigo">
                             @foreach ($data as $item => $value)
                                 <option value="{{$item}}">{{$value}}</option>
                             @endforeach
                       </select>
+                      <label for="tdoc_codigo">Tipo de Usuario</label>
                       <small id="tusu_codigo" class="form-text text-muted"></small>
                       <input  type="text" name="usu_nombre" value="{{$usuario->usu_nombre}}" class="form-control" id="usu_nombre">
                       <small id="usu_nombre" class="form-text text-muted">Por Ejemplo: pepe</small>

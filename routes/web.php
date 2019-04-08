@@ -1,4 +1,6 @@
 <?php
+use Symfony\Component\HttpFoundation\Request;
+use App\cuentas;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,10 +21,15 @@ Route::resource('tdocumento','TiposDocumentosController');
 Route::resource('tdocliente','ClientesController');
 Route::resource('tdocuenta','CuentasController');
 Route::resource('tdousuario','UsuariosController');
+Route::resource('tdoretiros','RetirosController');
+Route::resource('tdoconsignaciones','ConsignacionesController');
+
 
 
 Route::get('logout', function(){
     Auth::logout();
     return redirect('/');
 });
+
+
 

@@ -4,10 +4,12 @@
 
 @section('contenido')
     
-    <div class="text-center mt-5 mb-5"><h1>Clientes</h1></div>
+    <div class="text-center mt-5 mb-5"><h1>Usuarios</h1></div>
      <div class="container">
             <table class="table table-striped table-dark">
-                <a class="btn btn-primary mb-3" href="{{route('tdousuario.create')}}">Registrar</a>
+              <tr>
+                <a class="btn btn-dark mb-3 mr-3" href="{{route('tdousuario.create')}}"><i class="fas fa-user-plus"></i></a>                 
+              </tr>
                     <thead>
                       <tr>
                         <th scope="col"  class="text-center">Identificacion</th>
@@ -27,7 +29,6 @@
                           <td class="text-center"> {{ $usuario->usu_login }} </td>
                           <td class="text-center"> {{ $usuario->usu_clave }} </td>
                           <td class="text-center"><a class="btn btn-dark mb-2" href="{{route('tdousuario.edit',$usuario->usu_cedula)}}"><i class="far fa-edit"></i></a>
-                          <td><a class="btn btn-dark"><i class="fas fa-info-circle"></i></a> </td>
                           </tr>
                         @endforeach
                     </tbody>

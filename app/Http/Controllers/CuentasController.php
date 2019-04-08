@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\cuentas;
+use App\clientes;
 use Illuminate\Http\Request;
 
 class CuentasController extends Controller
@@ -56,9 +57,12 @@ class CuentasController extends Controller
      * @param  \App\cuentas  $cuentas
      * @return \Illuminate\Http\Response
      */
-    public function edit(cuentas $cuentas)
+    public function edit($cuenta)
     {
-        //
+
+        $data=clientes::pluck('cli_nombre','cli_cedula');;
+        $cuentas=cuentas::find($cuenta);
+        return view('TdoCuentas.cuedi',compact('cuentas','data'));
     }
 
     /**
@@ -68,9 +72,16 @@ class CuentasController extends Controller
      * @param  \App\cuentas  $cuentas
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, cuentas $cuentas)
+    public function update(Request $request,$cuentas)
     {
-        //
+        $request->validate([
+            'cue_cedula'=>'required|max:9',
+            'cue_clave'=>'required|max:4|min:4'
+        ]);
+        $cuenta=cuentas::find($cuentas);
+        $cuenta->update($request->all());
+        
+        return redirect()->route('tdocuenta.index');
     }
 
     /**

@@ -28,7 +28,9 @@
                                       @else
                                       <td class="text-center">Activa</td>
                                     @endif
-                                    <td class="text-center">{{$cuentas->cue_clave}}</td>                               
+                                    <td class="text-center">{{$cuentas->cue_clave}}</td> 
+                                    <td><td class="text-center"><a class="btn btn-dark mb-2" href="{{route('tdocuenta.edit',$cuentas->cue_numero)}}"><i class="far fa-edit"></i></a>
+                                    </td>                              
                                   </tr>
                             @endforeach
                     </tbody>
