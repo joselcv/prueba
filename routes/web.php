@@ -15,7 +15,7 @@ use App\cuentas;
 
 Route::get('/', function () {
     return view('index');
-});
+})->name('/');
 Route::get('tdousuario/check','UsuariosController@check')->name('tdousuario.check');
 Route::resource('tdocumento','TiposDocumentosController');
 Route::resource('tdocliente','ClientesController');

@@ -19,13 +19,24 @@ class UsuariosController extends Controller
 
     public function check(Request $request){
       //metodo para encriptar $request['pass'] = Hash::make($request['pass']);
+
+      $request->validate([
+        'ide'=>'required',
+        'usu'=>'required',
+        'pass'=>'required'
+      ]);
+
         $usuario = DB::table('usuarios')->where('usu_cedula', $request->get('ide'))->first();
         if($usuario->usu_cedula==$request->get('ide') && $usuario->usu_login==$request->get('usu')  && $usuario->usu_clave==$request->get('pass') ){
             if($usuario->tusu_codigo==1){
                 //cajero
+                return redirect()->route('tdousuario.index');
             }else{
                 // Asesor comercial
+                return redirect()->route('tdousuario.index');
             }
+        }else{
+            return redirect()->route('/');
         }
       
     }
