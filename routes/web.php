@@ -28,22 +28,22 @@ Route::get('logout', function(){
     return redirect('/');
 });
 
-Route::middleware('check')->group(function(){
+// Route::middleware('check')->group(function(){
 
-    Route::get('tdousuario.index','UsuariosController@index')->name('tdousuario.check');
-    Route::resource('tdocumento','TiposDocumentosController');
-    Route::resource('tdocliente','ClientesController');
-    Route::resource('tdocuenta','CuentasController');
-    Route::resource('tdousuario','UsuariosController');
-    Route::resource('tdoretiros','RetirosController');
-    Route::resource('tdoconsignaciones','ConsignacionesController');
+//     Route::get('tdousuario.index','UsuariosController@index')->name('tdousuario.check');
+//     Route::resource('tdocumento','TiposDocumentosController');
+//     Route::resource('tdocliente','ClientesController');
+//     Route::resource('tdocuenta','CuentasController');
+//     Route::resource('tdousuario','UsuariosController');
+//     Route::resource('tdoretiros','RetirosController');
+//     Route::resource('tdoconsignaciones','ConsignacionesController');
 
-});
+// });
 
-// Route::get('tdousuario/check','UsuariosController@index')->name('tdousuario.check');
-// Route::resource('tdocumento','TiposDocumentosController');
-// Route::resource('tdocliente','ClientesController');
-// Route::resource('tdocuenta','CuentasController');
-// Route::resource('tdousuario','UsuariosController');
-// Route::resource('tdoretiros','RetirosController');
-// Route::resource('tdoconsignaciones','ConsignacionesController');
+ Route::get('tdousuario.index','UsuariosController@index')->name('tdousuario.check');
+Route::resource('tdocumento','TiposDocumentosController');
+Route::resource('tdocliente','ClientesController');
+Route::resource('tdocuenta','CuentasController');
+Route::resource('tdousuario','UsuariosController');
+Route::resource('tdoretiros','RetirosController');
+Route::resource('tdoconsignaciones','ConsignacionesController');
