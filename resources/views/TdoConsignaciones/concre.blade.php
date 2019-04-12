@@ -5,6 +5,16 @@
 
 @section('contenido')
         <div class="container">
+               @if ($errors->any())
+            <div class="alert alert-danger">
+                <h6>Por favor corrige los siguientes Errores:</h6>
+            <ul>
+                    @foreach ($errors->all() as $error)
+                    <li>{{$error}}</li>
+            @endforeach 
+            </ul>     
+            </div>  
+        @endif
                 <div class="form-group">
                 <h1 class="text-center mt-5">Consignaciones</h1>
                         <form  method="POST" action=" {{route('tdoconsignaciones.store')}} ">

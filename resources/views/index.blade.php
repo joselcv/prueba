@@ -5,6 +5,16 @@
 @section('contenido')
 
     <div class="container">
+                @if ($errors->any())
+            <div class="alert alert-danger">
+                <h6>Por favor corrige los siguientes Errores:</h6>
+            <ul>
+                    @foreach ($errors->all() as $error)
+                    <li>{{$error}}</li>
+            @endforeach 
+            </ul>     
+            </div>  
+        @endif
             <div class="aut">
                     <h1 class="text-center">Login</h1>
                     <div></div>

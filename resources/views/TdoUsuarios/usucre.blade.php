@@ -43,12 +43,12 @@
                       @if ($errors->has('usu_nombre'))
                         <li class="alert alert-danger"> {{$errors->first('usu_nombre')}} </li>                          
                       @endif
-                      <input  type="text" class="form-control" id="usu_login" name="usu_login" value="{{ old('usu_login') }}" placeholder="Usuarip" >
+                      <input  type="text" class="form-control" id="usu_login" name="usu_login" value="{{ old('usu_login') }}" placeholder="Usuario" >
                       <small id="usu_login" class="form-text text-muted">Por Ejemplo: elbalazo</small>
                       @if ($errors->has('usu_login'))
                         <li class="alert alert-danger"> {{$errors->first('usu_login')}} </li>                          
                       @endif
-                      <input  type="text" class="form-control" id="usu_clave" name="usu_clave" value="{{ old('usu_clave') }}" placeholder="Clave" >
+                      <input  type="password" class="form-control" id="usu_clave" name="usu_clave" value="{{ old('usu_clave') }}" placeholder="Clave" >
                       <small id="usu_clave" class="form-text text-muted">Por Ejemplo: asd123</small>
                       @if ($errors->has('usu_clave'))
                         <li class="alert alert-danger"> {{$errors->first('usu_clave')}} </li>                          

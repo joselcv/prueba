@@ -7,6 +7,16 @@
 
 
 <div class="container">
+        @if ($errors->any())
+        <div class="alert alert-danger mt-5">
+            <h6>Por favor corrige los siguientes Errores:</h6>
+        <ul>
+                @foreach ($errors->all() as $error)
+                <li>{{$error}}</li>
+        @endforeach 
+        </ul>     
+        </div>  
+    @endif
         <h1 class="text-center mt-5 mb-5">Editar Usuarios</h1>
             <form  method="POST" action=" {{route('tdousuario.update',$usuario->usu_cedula)}} ">
                 @csrf
