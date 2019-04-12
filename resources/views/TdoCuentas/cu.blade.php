@@ -4,7 +4,7 @@
 
 @section('contenido')
     
-    <div class="text-center mt-5 mb-5"><h1>Cuentas</h1></div>
+    <div class="text-center mt-5 mb-5"><h1>Cuentas de Ahorro</h1></div>
      <div class="container w-50">
             <table class="table table-striped table-dark">
                     <thead>

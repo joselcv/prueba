@@ -22,11 +22,6 @@
                                     <td class="text-center">{{$tipos_documentos->tdoc_codigo}}</td>
                                     <td class="text-center">{{$tipos_documentos->tdoc_nombre}}</td>
                                     <td class="text-center"><a class="btn btn-dark mb-2" href="{{route('tdocumento.edit',$tipos_documentos->tdoc_codigo)}}"><i class="far fa-edit"></i></a>
-                                      <form action="{{route('tdocumento.destroy',$tipos_documentos->tdoc_codigo)}}" method="POST">
-                                          @csrf
-                                          @method('DELETE')
-                                          <a class="btn btn-dark"><i class="fas fa-trash-alt"></i></a>
-                                      </form>
                                     </td>
                                    
                                   </tr>

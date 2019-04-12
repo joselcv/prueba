@@ -5,6 +5,7 @@
 
 @section('contenido')
         <div class="container">
+                <div class="form-group">
                 <h1 class="text-center mt-5">Consignaciones</h1>
                         <form  method="POST" action=" {{route('tdoconsignaciones.store')}} ">
                             @csrf
@@ -29,6 +30,7 @@
                                   <textarea style="height: 50px"name="con_descripcion" id="con_descripcion" cols="30" rows="10" readonly>Consignacion</textarea>                                  
                                   </div>
                                 <button class="btn btn-primary mb-4">consignar</button>
-                        </form>   
+                        </form>  
+                    </div> 
                 </div> 
 @endsection

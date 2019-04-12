@@ -9,7 +9,7 @@
                     <h1 class="text-center">Login</h1>
                     <div></div>
                     <div>
-                    <form method="POST" action="{{route('tdousuario.check')}}">
+                    <form method="POST" action="{{route('tdousuario.index')}}">
                             @method('GET')
                             @csrf
                             <input name="ide" type="text" placeholder="Identificacion"><br><br>

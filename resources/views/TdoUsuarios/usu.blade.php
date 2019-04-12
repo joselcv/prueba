@@ -32,6 +32,7 @@
                           </tr>
                         @endforeach
                     </tbody>
-                  </table>         
-    </div>    
+                  </table>      
+                  {{ $data->links() }}   
+    </div>
 @endsection
